@@ -114,3 +114,8 @@ gapminder_leido <- read.csv("gapminder.csv")
 # ...
 # Ingresa tu código aquí
 # ...
+
+gapminder %>% group_by(continent) %>%
+  summarise(
+    paises = length(unique(country))
+  )
